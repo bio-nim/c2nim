@@ -1,5 +1,6 @@
 C=../c2nim
 
+default: testc-bug78
 ALLC:=$(patsubst %.c,testc-%,$(notdir $(wildcard tests/*.c)))
 ALLH:=$(patsubst %.h,testh-%,$(notdir $(wildcard tests/*.h)))
 ALLCPP:=$(patsubst %.cpp,testcpp-%,$(notdir $(wildcard tests/*.cpp)))

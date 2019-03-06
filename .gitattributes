@@ -6,5 +6,5 @@
 * text eol=lf
 
 # Declare files that will always have CRLF line endings on checkout.
-testsuite/tests/matrix.cpp    binary
-testsuite/tests/smartptrs.cpp binary
+testsuite/tests/matrix.cpp    text eol=lf
+testsuite/tests/smartptrs.cpp text eol=lf

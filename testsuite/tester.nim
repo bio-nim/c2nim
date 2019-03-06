@@ -1,12 +1,12 @@
 # Small program that runs the test cases
 
 import strutils, os
-
 const
-  c2nimCmd = "c2nim $#"
-  cpp2nimCmd = "c2nim --cpp $#"
-  hpp2nimCmd = "c2nim --cpp --header $#"
-  dir = "testsuite/"
+  c2nim {.strdefine.} = "c2nim"
+  c2nimCmd = c2nim & " $#"
+  cpp2nimCmd = c2nim & " --cpp $#"
+  hpp2nimCmd = c2nim & " --cpp --header $#"
+  dir = parentDir(currentSourcePath()) & "/" # "testsuite/"
 
 var
   failures = 0

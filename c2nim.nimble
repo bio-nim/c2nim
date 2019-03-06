@@ -14,7 +14,7 @@ import strutils
 
 task test, "runs c2nim tests":
   exec "nimble build"
-  exec "nim c --run testsuite/tester.nim"
+  exec "nim c -d:c2nim=./c2nim --run testsuite/tester.nim"
 
 task docs, "build c2nim's docs":
   exec "nim rst2html --putenv:c2nimversion=$1 doc/c2nim.rst" % version
